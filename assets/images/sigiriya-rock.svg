@@ -1,0 +1,8 @@
+<svg class="rock-art" viewBox="0 0 900 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M100 400 L160 300 L200 320 L230 260 L270 240 L300 180 L350 170 L380 120 L420 100 L450 80 L480 100 L520 120 L550 140 L580 170 L610 180 L650 210 L680 250 L720 270 L750 290 L800 400Z" fill="rgba(0,212,255,1)"/>
+      <path d="M0 400 L80 380 L100 360 L130 380 L160 350 L200 370 L240 400Z" fill="rgba(0,150,255,1)"/>
+      <path d="M750 400 L800 370 L840 380 L870 360 L900 380 L900 400Z" fill="rgba(0,150,255,1)"/>
+      <rect x="390" y="80" width="120" height="15" rx="7" fill="rgba(255,107,0,0.8)"/>
+      <rect x="395" y="55" width="110" height="28" rx="6" fill="rgba(255,107,0,0.6)"/>
+      <rect x="400" y="35" width="100" height="22" rx="5" fill="rgba(255,107,0,0.5)"/>
+    </svg>

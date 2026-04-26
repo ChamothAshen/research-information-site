@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sigiriya Tourism Digital Twin Platform</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <nav>
+    <div class="nav-logo">⟡ Sigiriya <span>Digital Twin</span></div>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="domain.html">Domain</a></li>
+      <li><a href="milestones.html" class="active">Milestones</a></li>
+      <li><a href="documents.html">Documents</a></li>
+      <li><a href="presentations.html">Presentations</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+    <div class="nav-search" style="margin-left: auto; margin-right: 1rem;">
+      <input type="text" placeholder="Search..."
+        style="background: rgba(0,212,255,0.05); border: 1px solid var(--border); color: var(--text); padding: 0.4rem 0.8rem; border-radius: 4px; font-family: 'Rajdhani', sans-serif; font-size: 0.85rem; outline: none;">
+    </div>
+
+
+    <div class="hamburger" onclick="toggleMenu()" id="ham">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+  <section id="milestones" style="display:block;">
+    <div class="page-hero">
+      <span class="section-tag">Project Timeline</span>
+      <h2>Milestones</h2>
+      <p>Project assessments, timeline, and achievement tracking</p>
+    </div>
+    <div class="page-content">
+
+      <!-- Timeline Visual -->
+      <div class="timeline-visual">
+        <div class="tl-item done" onclick="selectMilestone(0)">
+          <div class="tl-dot">✅</div>
+          <div class="tl-label">Proposal</div>
+        </div>
+        <div class="tl-line"></div>
+        <div class="tl-item done" onclick="selectMilestone(1)">
+          <div class="tl-dot">📊</div>
+          <div class="tl-label">Progress 1</div>
+        </div>
+        <div class="tl-line"></div>
+        <div class="tl-item done" onclick="selectMilestone(2)">
+          <div class="tl-dot">📱</div>
+          <div class="tl-label">Progress 2</div>
+        </div>
+        <div class="tl-line"></div>
+        <div class="tl-item active-tl" onclick="selectMilestone(3)">
+          <div class="tl-dot">🏆</div>
+          <div class="tl-label">Final</div>
+        </div>
+        <div class="tl-line"></div>
+        <div class="tl-item" onclick="selectMilestone(4)">
+          <div class="tl-dot">🎓</div>
+          <div class="tl-label">Viva Voce</div>
+        </div>
+      </div>
+
+      <select class="milestone-selector" onchange="selectMilestone(this.value)" id="msSelect">
+        <option value="0">Project Proposal</option>
+        <option value="1">Progress Presentation 1</option>
+        <option value="2">Progress Presentation 2</option>
+        <option value="3" selected>Final Assessment</option>
+        <option value="4">Viva Voce</option>
+      </select>
+
+
+
+
+      <!-- Milestone Cards -->
+      <div class="milestone-card" id="ms-0">
+        <div class="content-card">
+          <div class="milestone-header">
+            <div class="milestone-icon">📋</div>
+            <div class="milestone-info">
+              <h3>Project Proposal</h3>
+              <div class="milestone-meta">
+                <span class="meta-chip chip-date">📅 [Submission Date]</span>
+                <span class="meta-chip chip-marks">⭐ [Marks]/[Total]</span>
+                <span class="meta-chip chip-status-done">✅ Completed</span>
+              </div>
+            </div>
+          </div>
+          <p style="color:var(--text-dim);line-height:1.8;margin-bottom:1.5rem">Initial project concept, problem
+            definition, and proposed solution. This document outlined the core vision of the Sigiriya Tourism Digital
+            Twin Platform and justified the need for an integrated AI-based management system at this UNESCO World
+            Heritage Site.</p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap">
+            <a href="#" class="btn-primary" style="padding:0.6rem 1.5rem;font-size:0.85rem">⬇ Download Proposal</a>
+            <a href="#" class="btn-outline" style="padding:0.6rem 1.5rem;font-size:0.85rem">📄 View Document</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="milestone-card" id="ms-1">
+        <div class="content-card">
+          <div class="milestone-header">
+            <div class="milestone-icon">📊</div>
+            <div class="milestone-info">
+              <h3>Progress Presentation 1</h3>
+              <div class="milestone-meta">
+                <span class="meta-chip chip-date">📅 [Scheduled Date]</span>
+                <span class="meta-chip chip-marks">⭐ [Marks]/[Total]</span>
+                <span class="meta-chip chip-status-done">✅ Completed</span>
+              </div>
+            </div>
+          </div>
+          <p style="color:var(--text-dim);line-height:1.8;margin-bottom:1.5rem">Focus: System Design & Module 1-2
+            Implementation covering crowd detection and visitor forecasting modules.</p>
+          <div style="display:flex;flex-direction:column;gap:0.8rem;margin-bottom:1.5rem">
+            <div
+              style="display:flex;gap:1rem;align-items:center;padding:0.8rem;background:rgba(0,212,255,0.03);border-radius:8px;border:1px solid rgba(0,212,255,0.08)">
+              <span style="color:var(--accent)">✓</span><span style="color:var(--text-dim);font-size:0.9rem">YOLOv8
+                crowd detection model training & evaluation</span>
+            </div>
+            <div
+              style="display:flex;gap:1rem;align-items:center;padding:0.8rem;background:rgba(0,212,255,0.03);border-radius:8px;border:1px solid rgba(0,212,255,0.08)">
+              <span style="color:var(--accent)">✓</span><span style="color:var(--text-dim);font-size:0.9rem">Prophet
+                forecasting API development and testing</span>
+            </div>
+            <div
+              style="display:flex;gap:1rem;align-items:center;padding:0.8rem;background:rgba(0,212,255,0.03);border-radius:8px;border:1px solid rgba(0,212,255,0.08)">
+              <span style="color:var(--accent)">✓</span><span style="color:var(--text-dim);font-size:0.9rem">Initial
+                data pipeline and MongoDB schema setup</span>
+            </div>
+          </div>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap">
+            <a href="#" class="btn-primary" style="padding:0.6rem 1.5rem;font-size:0.85rem">⬇ Download Slides</a>
+            <a href="#" class="btn-outline" style="padding:0.6rem 1.5rem;font-size:0.85rem">📊 View Presentation</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="milestone-card" id="ms-2">
+        <div class="content-card">
+          <div class="milestone-header">
+            <div class="milestone-icon">📱</div>
+            <div class="milestone-info">
+              <h3>Progress Presentation 2</h3>
+              <div class="milestone-meta">
+                <span class="meta-chip chip-date">📅 [Scheduled Date]</span>
+                <span class="meta-chip chip-marks">⭐ [Marks]/[Total]</span>
+                <span class="meta-chip chip-status-done">✅ Completed</span>
+              </div>
+            </div>
+          </div>
+          <p style="color:var(--text-dim);line-height:1.8;margin-bottom:1rem">Focus: Module 3-4 Implementation &
+            Integration covering risk prediction, path prediction, and Flutter app development.</p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.6rem">
+            <li style="color:var(--text-dim);font-size:0.9rem;padding-left:1.5rem;position:relative"><span
+                style="position:absolute;left:0;color:var(--secondary)">→</span> Risk prediction models deployed to
+              production</li>
+            <li style="color:var(--text-dim);font-size:0.9rem;padding-left:1.5rem;position:relative"><span
+                style="position:absolute;left:0;color:var(--secondary)">→</span> Path prediction ML model implementation
+            </li>
+            <li style="color:var(--text-dim);font-size:0.9rem;padding-left:1.5rem;position:relative"><span
+                style="position:absolute;left:0;color:var(--secondary)">→</span> Flutter application 70% complete with
+              all core screens</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="milestone-card active" id="ms-3">
+        <div class="content-card">
+          <div class="milestone-header">
+            <div class="milestone-icon">🏆</div>
+            <div class="milestone-info">
+              <h3>Final Assessment</h3>
+              <div class="milestone-meta">
+                <span class="meta-chip chip-date">📅 [Scheduled Date]</span>
+                <span class="meta-chip chip-marks">⭐ [Marks]/[Total]</span>
+                <span class="meta-chip chip-status-upcoming">🔄 In Progress</span>
+              </div>
+            </div>
+          </div>
+          <p style="color:var(--text-dim);line-height:1.8;margin-bottom:1rem">Complete system demonstration with all 5
+            modules operational and integrated.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem">
+            <div
+              style="padding:0.8rem;background:rgba(0,212,255,0.04);border:1px solid rgba(0,212,255,0.1);border-radius:8px;font-size:0.85rem;color:var(--text-dim)">
+              ✦ Fully functional crowd detection</div>
+            <div
+              style="padding:0.8rem;background:rgba(0,212,255,0.04);border:1px solid rgba(0,212,255,0.1);border-radius:8px;font-size:0.85rem;color:var(--text-dim)">
+              ✦ 90-day forecasting API live</div>
+            <div
+              style="padding:0.8rem;background:rgba(0,212,255,0.04);border:1px solid rgba(0,212,255,0.1);border-radius:8px;font-size:0.85rem;color:var(--text-dim)">
+              ✦ Risk assessment dashboard</div>
+            <div
+              style="padding:0.8rem;background:rgba(0,212,255,0.04);border:1px solid rgba(0,212,255,0.1);border-radius:8px;font-size:0.85rem;color:var(--text-dim)">
+              ✦ Mobile tour guide app</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="milestone-card" id="ms-4">
+        <div class="content-card">
+          <div class="milestone-header">
+            <div class="milestone-icon">🎓</div>
+            <div class="milestone-info">
+              <h3>Viva Voce</h3>
+              <div class="milestone-meta">
+                <span class="meta-chip chip-date">📅 TBD</span>
+                <span class="meta-chip chip-status-upcoming">🔜 Upcoming</span>
+              </div>
+            </div>
+          </div>
+          <p style="color:var(--text-dim);line-height:1.8">Oral examination to assess deep understanding of the system
+            design, implementation decisions, and research contributions. Panel of evaluators will conduct a
+            question-and-answer session covering all aspects of the Digital Twin platform.</p>
+        </div>
+      </div>
+
+    </div>
+    <footer>
+      <div class="footer-logo">⟡ Sigiriya Digital Twin Platform</div>
+      <div class="footer-text">AI-Powered Tourism Management · Sri Lanka © 2024</div>
+    </footer>
+  </section>
+
+  <script src="../js/script.js"></script>
+</body>
+
+</html>

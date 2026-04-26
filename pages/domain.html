@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sigiriya Tourism Digital Twin Platform</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<nav>
+  <div class="nav-logo">⟡ Sigiriya <span>Digital Twin</span></div>
+  <ul class="nav-menu" id="navMenu">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="domain.html" class="active">Domain</a></li>
+    <li><a href="milestones.html">Milestones</a></li>
+    <li><a href="documents.html">Documents</a></li>
+    <li><a href="presentations.html">Presentations</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+  
+  <div class="nav-search" style="margin-left: auto; margin-right: 1rem;">
+    <input type="text" placeholder="Search..." style="background: rgba(0,212,255,0.05); border: 1px solid var(--border); color: var(--text); padding: 0.4rem 0.8rem; border-radius: 4px; font-family: 'Rajdhani', sans-serif; font-size: 0.85rem; outline: none;">
+  </div>
+
+  
+  <div class="hamburger" onclick="toggleMenu()" id="ham">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<section id="domain" style="display:block;">
+  <div class="page-hero">
+    <span class="section-tag">Research & Technology</span>
+    <h2>Domain</h2>
+    <p>Research background, problem statement, and technical approach</p>
+  </div>
+  <div class="page-content">
+    <div class="domain-tabs">
+      <button class="tab-btn active" onclick="showTab('lit-survey', this)">Literature Survey</button>
+      <button class="tab-btn" onclick="showTab('res-gap', this)">Research Gap</button>
+      <button class="tab-btn" onclick="showTab('problem', this)">Problem Statement</button>
+      <button class="tab-btn" onclick="showTab('objectives', this)">Objectives</button>
+      <button class="tab-btn" onclick="showTab('methodology', this)">Methodology</button>
+      <button class="tab-btn" onclick="showTab('technologies', this)">Technologies</button>
+    </div>
+
+    <!-- Literature Survey -->
+    <div class="tab-content active" id="lit-survey">
+      <div class="content-card">
+        <h3>Literature Survey</h3>
+        <p>Existing research in tourism management systems has largely focused on static data analysis and manual monitoring approaches. Early works by Gössling et al. (2018) examined the environmental impact of mass tourism on heritage sites, identifying the need for real-time monitoring systems.</p>
+        <p>Computer vision applications in crowd analysis have advanced significantly with the introduction of deep learning models. Studies employing YOLO-based architectures have demonstrated impressive accuracy in pedestrian detection in complex outdoor environments (Redmon & Farhadi, 2018).</p>
+        <p>Predictive analytics for tourism demand has evolved from traditional ARIMA models to modern deep learning and probabilistic forecasting approaches. Facebook's Prophet model has shown particular effectiveness for tourism data with strong seasonal patterns and holiday effects.</p>
+        <p>Existing smart tourism platforms such as those deployed in Barcelona, Amsterdam, and Singapore have demonstrated the value of digital twin technology, yet no comprehensive implementation exists for heritage sites in South Asia — particularly those with unique topographic challenges like Sigiriya.</p>
+      </div>
+    </div>
+
+    <!-- Research Gap -->
+    <div class="tab-content" id="res-gap">
+      <div class="content-card">
+        <h3>Research Gap</h3>
+        <p>A thorough analysis of existing solutions reveals several critical gaps that this project aims to address:</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:1rem;margin-top:1rem">
+          <li style="padding:1rem;background:rgba(255,107,0,0.05);border:1px solid rgba(255,107,0,0.2);border-radius:8px;color:var(--text-dim);font-size:0.95rem"><strong style="color:var(--secondary)">Gap 1:</strong> No integrated real-time crowd management + forecasting system exists for UNESCO World Heritage Sites in Sri Lanka</li>
+          <li style="padding:1rem;background:rgba(255,107,0,0.05);border:1px solid rgba(255,107,0,0.2);border-radius:8px;color:var(--text-dim);font-size:0.95rem"><strong style="color:var(--secondary)">Gap 2:</strong> Existing environmental risk systems do not account for topographic-specific hazards (steep terrain, weather, crowd density synergies)</li>
+          <li style="padding:1rem;background:rgba(255,107,0,0.05);border:1px solid rgba(255,107,0,0.2);border-radius:8px;color:var(--text-dim);font-size:0.95rem"><strong style="color:var(--secondary)">Gap 3:</strong> No mobile-first tour guidance app integrates live crowd data, risk alerts, and path recommendations simultaneously</li>
+          <li style="padding:1rem;background:rgba(255,107,0,0.05);border:1px solid rgba(255,107,0,0.2);border-radius:8px;color:var(--text-dim);font-size:0.95rem"><strong style="color:var(--secondary)">Gap 4:</strong> Current visitor forecasting tools lack 90-day horizon accuracy sufficient for operational planning</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Problem Statement -->
+    <div class="tab-content" id="problem">
+      <div class="content-card">
+        <h3>Research Problem Statement</h3>
+        <p style="font-size:1.05rem;color:var(--primary);font-style:italic;margin-bottom:1.5rem">"How can we efficiently manage real-time visitor flow, forecast demand, assess environmental safety risks, and guide tourists intelligently at Sigiriya Rock Fortress through an integrated AI-powered digital twin platform?"</p>
+        <p>Sigiriya Rock Fortress receives over 500,000 visitors annually. The site faces critical challenges:</p>
+        <ul style="list-style:none;margin-top:1rem;display:flex;flex-direction:column;gap:0.8rem">
+          <li style="display:flex;gap:1rem;align-items:flex-start;color:var(--text-dim);font-size:0.9rem"><span style="color:var(--primary);font-size:1.2rem">◆</span> Dangerous overcrowding at narrow passages and stairways during peak hours</li>
+          <li style="display:flex;gap:1rem;align-items:flex-start;color:var(--text-dim);font-size:0.9rem"><span style="color:var(--primary);font-size:1.2rem">◆</span> Unpredictable visitor numbers making resource allocation extremely difficult</li>
+          <li style="display:flex;gap:1rem;align-items:flex-start;color:var(--text-dim);font-size:0.9rem"><span style="color:var(--primary);font-size:1.2rem">◆</span> Environmental risks from weather, erosion, and infrastructure stress going undetected</li>
+          <li style="display:flex;gap:1rem;align-items:flex-start;color:var(--text-dim);font-size:0.9rem"><span style="color:var(--primary);font-size:1.2rem">◆</span> Lack of intelligent guidance causing visitor congestion at popular areas</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Objectives -->
+    <div class="tab-content" id="objectives">
+      <div class="content-card">
+        <h3>Research Objectives</h3>
+        <ul class="objectives-list">
+          <li><span class="obj-num">1</span>Develop a YOLOv8-based real-time crowd detection and density mapping system covering 11 key points of interest at Sigiriya</li>
+          <li><span class="obj-num">2</span>Build a 90-day visitor forecasting REST API using Meta Prophet time-series model trained on historical tourism data</li>
+          <li><span class="obj-num">3</span>Create a multi-layer environmental and safety risk prediction system integrating weather, crowd, and historical incident data</li>
+          <li><span class="obj-num">4</span>Design and deploy an intelligent path prediction algorithm for optimal tourist route recommendations</li>
+          <li><span class="obj-num">5</span>Build a cross-platform Flutter mobile application integrating all modules for visitor and management use</li>
+          <li><span class="obj-num">6</span>Integrate all sub-systems into a unified digital twin platform with FastAPI backend and MongoDB data persistence</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Methodology -->
+    <div class="tab-content" id="methodology">
+      <div class="content-card">
+        <h3>Methodology</h3>
+        <p>The project follows a modular, iterative development methodology with five distinct phases:</p>
+        <div style="display:flex;flex-direction:column;gap:1rem;margin-top:1rem">
+          <div style="display:flex;gap:1.5rem;align-items:flex-start">
+            <div style="background:linear-gradient(135deg,var(--primary),#0088cc);color:var(--bg);padding:0.3rem 0.7rem;border-radius:4px;font-weight:700;font-size:0.8rem;flex-shrink:0">Phase 1</div>
+            <div style="color:var(--text-dim);font-size:0.9rem"><strong style="color:var(--text)">Data Collection & Preprocessing</strong> — Historical visitor data collection from SLAS, CCTV footage annotation, weather data integration from meteorological services, and site mapping</div>
+          </div>
+          <div style="display:flex;gap:1.5rem;align-items:flex-start">
+            <div style="background:linear-gradient(135deg,var(--secondary),#cc4400);color:var(--bg);padding:0.3rem 0.7rem;border-radius:4px;font-weight:700;font-size:0.8rem;flex-shrink:0">Phase 2</div>
+            <div style="color:var(--text-dim);font-size:0.9rem"><strong style="color:var(--text)">Model Development</strong> — YOLOv8 fine-tuning on custom dataset, Prophet model training with hyperparameter optimization, risk classification model development using Scikit-learn ensemble methods</div>
+          </div>
+          <div style="display:flex;gap:1.5rem;align-items:flex-start">
+            <div style="background:linear-gradient(135deg,#7fff00,#44aa00);color:var(--bg);padding:0.3rem 0.7rem;border-radius:4px;font-weight:700;font-size:0.8rem;flex-shrink:0">Phase 3</div>
+            <div style="color:var(--text-dim);font-size:0.9rem"><strong style="color:var(--text)">API Development</strong> — FastAPI backend with MongoDB integration, RESTful endpoints for all modules, real-time WebSocket connections for live data streaming</div>
+          </div>
+          <div style="display:flex;gap:1.5rem;align-items:flex-start">
+            <div style="background:linear-gradient(135deg,var(--gold),#cc8800);color:var(--bg);padding:0.3rem 0.7rem;border-radius:4px;font-weight:700;font-size:0.8rem;flex-shrink:0">Phase 4</div>
+            <div style="color:var(--text-dim);font-size:0.9rem"><strong style="color:var(--text)">Mobile Application</strong> — Flutter cross-platform app development with interactive map, real-time alerts, tour guidance, and admin dashboard modules</div>
+          </div>
+          <div style="display:flex;gap:1.5rem;align-items:flex-start">
+            <div style="background:linear-gradient(135deg,#aa00ff,#7700cc);color:white;padding:0.3rem 0.7rem;border-radius:4px;font-weight:700;font-size:0.8rem;flex-shrink:0">Phase 5</div>
+            <div style="color:var(--text-dim);font-size:0.9rem"><strong style="color:var(--text)">Integration & Deployment</strong> — System integration testing, Railway cloud deployment, performance optimization, and live pilot testing at Sigiriya</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Technologies -->
+    <div class="tab-content" id="technologies">
+      <div class="content-card">
+        <h3>Technologies Used</h3>
+        <table class="tech-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Technology</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>AI / Computer Vision</td><td><span class="tech-badge">YOLOv8</span></td><td style="color:var(--text-dim);font-size:0.85rem">Real-time crowd detection</td></tr>
+            <tr><td>Forecasting</td><td><span class="tech-badge">Prophet</span> <span class="tech-badge">Python</span></td><td style="color:var(--text-dim);font-size:0.85rem">90-day visitor prediction</td></tr>
+            <tr><td>Machine Learning</td><td><span class="tech-badge">Scikit-learn</span> <span class="tech-badge">Pandas</span></td><td style="color:var(--text-dim);font-size:0.85rem">Risk & path prediction</td></tr>
+            <tr><td>Backend API</td><td><span class="tech-badge">FastAPI</span> <span class="tech-badge">Python</span></td><td style="color:var(--text-dim);font-size:0.85rem">REST API & WebSocket server</td></tr>
+            <tr><td>Database</td><td><span class="tech-badge">MongoDB</span></td><td style="color:var(--text-dim);font-size:0.85rem">Data persistence & analytics</td></tr>
+            <tr><td>Mobile App</td><td><span class="tech-badge">Flutter</span> <span class="tech-badge">Dart</span></td><td style="color:var(--text-dim);font-size:0.85rem">Cross-platform mobile app</td></tr>
+            <tr><td>Deployment</td><td><span class="tech-badge">Railway</span> <span class="tech-badge">Docker</span></td><td style="color:var(--text-dim);font-size:0.85rem">Cloud hosting & CI/CD</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <footer><div class="footer-logo">⟡ Sigiriya Digital Twin Platform</div><div class="footer-text">AI-Powered Tourism Management · Sri Lanka © 2024</div></footer>
+</section>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sigiriya Tourism Digital Twin Platform</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+  <div class="nav-logo">⟡ Sigiriya <span>Digital Twin</span></div>
+  <ul class="nav-menu" id="navMenu">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="pages/domain.html">Domain</a></li>
+    <li><a href="pages/milestones.html">Milestones</a></li>
+    <li><a href="pages/documents.html">Documents</a></li>
+    <li><a href="pages/presentations.html">Presentations</a></li>
+    <li><a href="pages/about.html">About Us</a></li>
+    <li><a href="pages/contact.html">Contact Us</a></li>
+  </ul>
+  
+  <div class="nav-search" style="margin-left: auto; margin-right: 1rem;">
+    <input type="text" placeholder="Search..." style="background: rgba(0,212,255,0.05); border: 1px solid var(--border); color: var(--text); padding: 0.4rem 0.8rem; border-radius: 4px; font-family: 'Rajdhani', sans-serif; font-size: 0.85rem; outline: none;">
+  </div>
+
+  
+  <div class="hamburger" onclick="toggleMenu()" id="ham">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<section id="home" style="display:block;">
+  <div class="hero-inner">
+    <!-- Decorative rock silhouette -->
+    <img class="rock-art" src="assets/images/sigiriya-rock.svg" alt="Sigiriya Rock Silhouette">
+
+    <div class="hero-badge">
+      <span class="hero-dot"></span>
+      UNESCO World Heritage Site · Sri Lanka
+    </div>
+
+    <h1 class="hero-title">Sigiriya Tourism<br>Digital Twin Platform</h1>
+    <p class="hero-sub">AI-Powered Smart Tourism Management System</p>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">90</div>
+        <div class="stat-label">Day Forecasting</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">11</div>
+        <div class="stat-label">Points of Interest</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">5</div>
+        <div class="stat-label">AI Modules</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">RT</div>
+        <div class="stat-label">Real-time Detection</div>
+      </div>
+    </div>
+
+    <div class="hero-cta">
+      <a href="pages/domain.html" class="btn-primary">Explore Project</a>
+      <a href="pages/documents.html" class="btn-outline">Documentation</a>
+    </div>
+  </div>
+
+  <!-- Features section -->
+  <div class="features-section">
+    <div class="section-header">
+      <span class="section-tag">Core Modules</span>
+      <h2 class="section-title">Integrated AI System</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <span class="feature-icon">👥</span>
+        <h3>Crowd Detection</h3>
+        <p>Real-time person detection and counting using YOLOv8 computer vision, providing live density maps across all 11 key areas of the fortress.</p>
+        <span class="feature-tag">YOLOv8 · Real-time</span>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">📈</span>
+        <h3>Visitor Forecasting</h3>
+        <p>90-day ahead visitor prediction using Meta Prophet time-series models trained on historical tourism data and seasonal patterns.</p>
+        <span class="feature-tag">Prophet · FastAPI</span>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">⚠️</span>
+        <h3>Risk Prediction</h3>
+        <p>Multi-layer environmental risk assessment combining weather data, crowd density, and historical incidents to predict safety risks.</p>
+        <span class="feature-tag">Scikit-learn · ML</span>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🗺️</span>
+        <h3>Path Prediction</h3>
+        <p>Intelligent tourist path prediction and route optimization using machine learning models to enhance visitor experience and flow.</p>
+        <span class="feature-tag">ML · Flutter</span>
+      </div>
+    </div>
+
+    <!-- Architecture -->
+    <div class="arch-diagram" style="margin-top:3rem">
+      <p class="arch-title">System Architecture Overview</p>
+      <div class="arch-grid">
+        <div class="arch-module">
+          <div class="arch-module-icon">🎥</div>
+          <div class="arch-module-name">Camera Feeds</div>
+        </div>
+        <div class="arch-module">
+          <div class="arch-module-icon">🤖</div>
+          <div class="arch-module-name">YOLOv8 Engine</div>
+        </div>
+        <div class="arch-hub">⟡</div>
+        <div class="arch-module">
+          <div class="arch-module-icon">📊</div>
+          <div class="arch-module-name">Prophet API</div>
+        </div>
+        <div class="arch-module">
+          <div class="arch-module-icon">📱</div>
+          <div class="arch-module-name">Flutter App</div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:1.5rem">
+        <span style="font-size:0.75rem;color:var(--text-dim);letter-spacing:0.15em">FastAPI Backend · MongoDB · Railway Cloud · Python/Pandas</span>
+      </div>
+    </div>
+
+    <div class="info-banner">
+      <div class="info-banner-icon">🏔️</div>
+      <div class="info-banner-text">
+        <h4>About Sigiriya Rock Fortress</h4>
+        <p>Sigiriya is a UNESCO World Heritage Site and one of Sri Lanka's most popular tourist destinations, attracting hundreds of thousands of visitors annually. This Digital Twin platform aims to revolutionize how this priceless heritage site is managed, ensuring safety, efficiency, and enhanced visitor experience through cutting-edge AI technology.</p>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-logo">⟡ Sigiriya Digital Twin Platform</div>
+    <div class="footer-text">AI-Powered Tourism Management · Sri Lanka © 2024</div>
+  </footer>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>

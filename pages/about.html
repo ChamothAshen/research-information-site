@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sigiriya Tourism Digital Twin Platform</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <nav>
+    <div class="nav-logo">⟡ Sigiriya <span>Digital Twin</span></div>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="domain.html">Domain</a></li>
+      <li><a href="milestones.html">Milestones</a></li>
+      <li><a href="documents.html">Documents</a></li>
+      <li><a href="presentations.html">Presentations</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+    <div class="nav-search" style="margin-left: auto; margin-right: 1rem;">
+      <input type="text" placeholder="Search..."
+        style="background: rgba(0,212,255,0.05); border: 1px solid var(--border); color: var(--text); padding: 0.4rem 0.8rem; border-radius: 4px; font-family: 'Rajdhani', sans-serif; font-size: 0.85rem; outline: none;">
+    </div>
+
+
+    <div class="hamburger" onclick="toggleMenu()" id="ham">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+  <section id="about" style="display:block;">
+    <div class="page-hero">
+      <span class="section-tag">The Team</span>
+      <h2>About Us</h2>
+      <p>Meet the researchers and developers behind the platform</p>
+    </div>
+    <div class="page-content">
+
+      <div class="section-header" style="text-align:left;margin-bottom:1.5rem">
+        <span class="section-tag">Team Members</span>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar"><img src="../assets/images/team/member-1.jpg" alt="Member 1 Photo"
+              style="width:100%;height:100%;border-radius:50%;object-fit:cover;"></div>
+          <div class="team-name">A W S M Weerasiri</div>
+          <div class="team-role">Project Lead · AI Engineer</div>
+          <div class="team-id">IT22895950</div>
+          <div class="team-email">it22895950@my.sliit.lk</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar"><img src="../assets/images/team/member-2.jpg" alt="Member 2 Photo"
+              style="width:100%;height:100%;border-radius:50%;object-fit:cover;"></div>
+          <div class="team-name">P K T S Dilrangi</div>
+          <div class="team-role">Computer Vision Specialist</div>
+          <div class="team-id">IT22509086</div>
+          <div class="team-email">it22509086@my.sliit.lk</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar"><img src="../assets/images/team/member-3.jpg" alt="Member 3 Photo"
+              style="width:100%;height:100%;border-radius:50%;object-fit:cover;"></div>
+          <div class="team-name">R A C A Ranasinhe</div>
+          <div class="team-role">ML & Data Engineer</div>
+          <div class="team-id">IT22577542</div>
+          <div class="team-email">it22577542@my.sliit.lk</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar"><img src="../assets/images/team/member-4.jpg" alt="Member 4 Photo"
+              style="width:100%;height:100%;border-radius:50%;object-fit:cover;"></div>
+          <div class="team-name">D N D G Nawarathne</div>
+          <div class="team-role">Mobile App Developer</div>
+          <div class="team-id">IT22589040</div>
+          <div class="team-email">it22589040@my.sliit.lk</div>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-bottom: 3rem;">
+        <div class="supervisor-card" style="margin: 0; flex: 1; min-width: 300px; max-width: 500px;">
+          <div class="sv-label">⭐ Project Supervisor</div>
+          <div class="team-avatar"
+            style="width:90px;height:90px;font-size:2.5rem;background:linear-gradient(135deg,rgba(255,215,0,0.1),rgba(255,215,0,0.05));border-color:rgba(255,215,0,0.3)">
+            <img src="../assets/images/team/supervisor.jpg" alt="Supervisor Photo"
+              style="width:100%;height:100%;border-radius:50%;object-fit:cover;">
+          </div>
+          <div class="team-name" style="margin-top:1rem;font-size:1.1rem">Sanjeewi Chandrasiri</div>
+          <div class="team-role" style="color:var(--gold)">Senior Lecturer in Department of Information Technology</div>
+          <div class="team-id" style="margin-top:0.5rem">sanji.c@sliit.lk</div>
+          <div style="font-size:0.8rem;color:var(--text-dim);margin-top:0.3rem">Specialization: Information Technology
+          </div>
+        </div>
+
+        <div class="supervisor-card"
+          style="margin: 0; flex: 1; min-width: 300px; max-width: 500px; border-color: rgba(0,212,255,0.2); box-shadow: 0 0 40px rgba(0,212,255,0.05);">
+          <div class="sv-label" style="color:var(--primary);">🌟 Co-Supervisor</div>
+          <div class="team-avatar"
+            style="width:90px;height:90px;font-size:2.5rem;background:linear-gradient(135deg,rgba(0,212,255,0.1),rgba(0,212,255,0.05));border-color:rgba(0,212,255,0.3)">
+            <img src="../assets/images/team/co-supervisor.jpg" alt="Co-Supervisor Photo"
+              style="width:100%;height:100%;border-radius:50%;object-fit:cover;">
+          </div>
+          <div class="team-name" style="margin-top:1rem;font-size:1.1rem">Aruni Premarathne</div>
+          <div class="team-role" style="color:var(--primary)">Assistant Lecturer</div>
+          <div class="team-id" style="margin-top:0.5rem">aruni.p@sliit.lk</div>
+          <div style="font-size:0.8rem;color:var(--text-dim);margin-top:0.3rem">Specialization: Information Technology
+          </div>
+        </div>
+      </div>
+
+      <div class="glow-divider"></div>
+
+      <div class="section-header" style="text-align:left;margin-bottom:1.5rem">
+        <span class="section-tag">Achievements & Progress</span>
+      </div>
+
+      <div class="achievements-grid">
+        <div class="ach-item"><span class="ach-check">✓</span> Project Proposal Submitted</div>
+        <div class="ach-item"><span class="ach-check">✓</span> YOLOv8 Model Trained</div>
+        <div class="ach-item"><span class="ach-check">✓</span> Prophet Forecasting API Built</div>
+        <div class="ach-item"><span class="ach-check"
+            style="background:rgba(255,107,0,0.1);color:var(--secondary)">⟳</span> Risk Prediction Models</div>
+        <div class="ach-item"><span class="ach-check"
+            style="background:rgba(255,107,0,0.1);color:var(--secondary)">⟳</span> Flutter App Development</div>
+        <div class="ach-item"><span class="ach-check"
+            style="background:rgba(100,100,100,0.1);color:var(--text-dim)">○</span> Full System Integration</div>
+      </div>
+
+      <div class="glow-divider"></div>
+
+      <div class="content-card" style="margin-top:2rem">
+        <h3>Project Impact</h3>
+        <p>This Digital Twin Platform represents a significant step forward in heritage site management across South
+          Asia. By combining real-time AI monitoring with predictive analytics, the system has the potential to reduce
+          overcrowding incidents by an estimated 60%, improve visitor experience scores, and enable data-driven
+          decisions for site management authorities.</p>
+        <p>Beyond Sigiriya, the modular architecture of this platform is designed for scalability — enabling deployment
+          at other UNESCO World Heritage Sites across Sri Lanka and potentially throughout the region, including sites
+          like Polonnaruwa, Dambulla, and Kandy.</p>
+      </div>
+
+    </div>
+    <footer>
+      <div class="footer-logo">⟡ Sigiriya Digital Twin Platform</div>
+      <div class="footer-text">AI-Powered Tourism Management · Sri Lanka © 2024</div>
+    </footer>
+  </section>
+
+  <script src="../js/script.js"></script>
+</body>
+
+</html>

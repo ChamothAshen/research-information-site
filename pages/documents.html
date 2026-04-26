@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sigiriya Tourism Digital Twin Platform</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<nav>
+  <div class="nav-logo">⟡ Sigiriya <span>Digital Twin</span></div>
+  <ul class="nav-menu" id="navMenu">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="domain.html">Domain</a></li>
+    <li><a href="milestones.html">Milestones</a></li>
+    <li><a href="documents.html" class="active">Documents</a></li>
+    <li><a href="presentations.html">Presentations</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+  
+  <div class="nav-search" style="margin-left: auto; margin-right: 1rem;">
+    <input type="text" placeholder="Search..." style="background: rgba(0,212,255,0.05); border: 1px solid var(--border); color: var(--text); padding: 0.4rem 0.8rem; border-radius: 4px; font-family: 'Rajdhani', sans-serif; font-size: 0.85rem; outline: none;">
+  </div>
+
+  
+  <div class="hamburger" onclick="toggleMenu()" id="ham">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<section id="documents" style="display:block;">
+  <div class="page-hero">
+    <span class="section-tag">Resources</span>
+    <h2>Documents</h2>
+    <p>All project documentation, reports, and downloadable resources</p>
+  </div>
+  <div class="page-content">
+
+    <div class="docs-section-title">Project Initiation</div>
+    <div class="docs-grid">
+      <div class="doc-card">
+        <div class="doc-icon-row">
+          <div class="doc-icon">📋</div>
+          <div>
+            <div class="doc-name">Project Charter</div>
+            <div class="doc-meta">PDF · Version 1.0 · ~2.5 MB</div>
+          </div>
+        </div>
+        <p class="doc-desc">Official project initiation document outlining scope, objectives, team responsibilities, and initial timeline for the Sigiriya Digital Twin Platform.</p>
+        <div class="doc-actions">
+          <button class="doc-btn doc-btn-dl">⬇ Download</button>
+          <button class="doc-btn doc-btn-pr">👁 Preview</button>
+        </div>
+      </div>
+
+      <div class="doc-card">
+        <div class="doc-icon-row">
+          <div class="doc-icon">📄</div>
+          <div>
+            <div class="doc-name">Proposal Document</div>
+            <div class="doc-meta">PDF · Version 1.0 · ~3.8 MB</div>
+          </div>
+        </div>
+        <p class="doc-desc">Detailed project proposal covering literature survey, research gaps, methodology, and technical architecture of the AI-powered tourism system.</p>
+        <div class="doc-actions">
+          <button class="doc-btn doc-btn-dl">⬇ Download</button>
+          <button class="doc-btn doc-btn-pr">👁 Preview</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="docs-section-title">Checklists</div>
+    <div class="docs-grid">
+      <div class="doc-card">
+        <div class="doc-icon-row">
+          <div class="doc-icon">✅</div>
+          <div>
+            <div class="doc-name">Requirements Checklist</div>
+            <div class="doc-meta">PDF · ~0.5 MB</div>
+          </div>
+        </div>
+        <p class="doc-desc">Complete functional and non-functional requirements verification checklist for all five system modules.</p>
+        <div class="doc-actions">
+          <button class="doc-btn doc-btn-dl">⬇ Download</button>
+          <button class="doc-btn doc-btn-pr">👁 Preview</button>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-icon-row">
+          <div class="doc-icon">🧪</div>
+          <div>
+            <div class="doc-name">Testing Checklist</div>
+            <div class="doc-meta">PDF · ~0.8 MB</div>
+          </div>
+        </div>
+        <p class="doc-desc">Quality assurance and system testing checklist covering unit tests, integration tests, and end-to-end validation scenarios.</p>
+        <div class="doc-actions">
+          <button class="doc-btn doc-btn-dl">⬇ Download</button>
+          <button class="doc-btn doc-btn-pr">👁 Preview</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="docs-section-title">Final Report Suite</div>
+    <div class="docs-grid">
+      <div class="doc-card">
+        <div class="doc-icon-row">
+          <div class="doc-icon">📗</div>
+          <div>
+            <div class="doc-name">Main Final Report</div>
+            <div class="doc-meta">PDF · ~8 MB · Pending</div>
+          </div>
+        </div>
+        <p class="doc-desc">Comprehensive final report covering all research phases, system development, evaluation results, and conclusions.</p>
+        <div class="doc-actions">
+          <button class="doc-btn doc-btn-dl" style="opacity:0.5;cursor:not-allowed">⏳ Pending</button>
+          <button class="doc-btn doc-btn-pr">👁 Preview</button>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-icon-row">
+          <div class="doc-icon">🔬</div>
+          <div>
+            <div class="doc-name">Technical Appendix</div>
+            <div class="doc-meta">PDF · ~4 MB · Pending</div>
+          </div>
+        </div>
+        <p class="doc-desc">Technical implementation details, API documentation, model architecture diagrams, and system configuration specifications.</p>
+        <div class="doc-actions">
+          <button class="doc-btn doc-btn-dl" style="opacity:0.5;cursor:not-allowed">⏳ Pending</button>
+          <button class="doc-btn doc-btn-pr">👁 Preview</button>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-icon-row">
+          <div class="doc-icon">📊</div>
+          <div>
+            <div class="doc-name">Data Analysis Report</div>
+            <div class="doc-meta">PDF · ~3 MB · Pending</div>
+          </div>
+        </div>
+        <p class="doc-desc">Statistical analysis of visitor data, model performance metrics, and comparative evaluation of all AI modules.</p>
+        <div class="doc-actions">
+          <button class="doc-btn doc-btn-dl" style="opacity:0.5;cursor:not-allowed">⏳ Pending</button>
+          <button class="doc-btn doc-btn-pr">👁 Preview</button>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-icon-row">
+          <div class="doc-icon">📱</div>
+          <div>
+            <div class="doc-name">User Guide</div>
+            <div class="doc-meta">PDF · ~2 MB · Pending</div>
+          </div>
+        </div>
+        <p class="doc-desc">Complete user manual for both the management dashboard and the visitor-facing Flutter mobile application.</p>
+        <div class="doc-actions">
+          <button class="doc-btn doc-btn-dl" style="opacity:0.5;cursor:not-allowed">⏳ Pending</button>
+          <button class="doc-btn doc-btn-pr">👁 Preview</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <footer><div class="footer-logo">⟡ Sigiriya Digital Twin Platform</div><div class="footer-text">AI-Powered Tourism Management · Sri Lanka © 2024</div></footer>
+</section>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

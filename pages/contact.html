@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sigiriya Tourism Digital Twin Platform</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<nav>
+  <div class="nav-logo">⟡ Sigiriya <span>Digital Twin</span></div>
+  <ul class="nav-menu" id="navMenu">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="domain.html">Domain</a></li>
+    <li><a href="milestones.html">Milestones</a></li>
+    <li><a href="documents.html">Documents</a></li>
+    <li><a href="presentations.html">Presentations</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html" class="active">Contact Us</a></li>
+  </ul>
+  
+  <div class="nav-search" style="margin-left: auto; margin-right: 1rem;">
+    <input type="text" placeholder="Search..." style="background: rgba(0,212,255,0.05); border: 1px solid var(--border); color: var(--text); padding: 0.4rem 0.8rem; border-radius: 4px; font-family: 'Rajdhani', sans-serif; font-size: 0.85rem; outline: none;">
+  </div>
+
+  
+  <div class="hamburger" onclick="toggleMenu()" id="ham">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<section id="contact" style="display:block;">
+  <div class="page-hero">
+    <span class="section-tag">Get In Touch</span>
+    <h2>Contact Us</h2>
+    <p>Reach out for inquiries, collaboration, or technical questions</p>
+  </div>
+  <div class="page-content">
+    <div class="contact-grid">
+
+      <div class="contact-form-wrap">
+        <div class="section-header" style="text-align:left;margin-bottom:1.5rem">
+          <span class="section-tag">Send a Message</span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Your Name</label>
+          <input type="text" class="form-input" placeholder="Full Name">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Subject</label>
+          <select class="form-select form-input">
+            <option value="">Select Subject</option>
+            <option>General Inquiry</option>
+            <option>Technical Question</option>
+            <option>Collaboration Request</option>
+            <option>Research Partnership</option>
+            <option>Media / Press</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-textarea form-input" placeholder="Your message here..."></textarea>
+        </div>
+        <button class="form-submit" onclick="this.textContent='✅ Message Sent!';setTimeout(()=>this.textContent='Send Message →',2000)">Send Message →</button>
+      </div>
+
+      <div class="contact-info-wrap">
+        <div class="section-header" style="text-align:left;margin-bottom:1.5rem">
+          <span class="section-tag">Contact Information</span>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="contact-info-icon">📧</div>
+          <div>
+            <div class="contact-info-label">Team Email</div>
+            <div class="contact-info-val">[group-email@sliit.lk]</div>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="contact-info-icon">👤</div>
+          <div>
+            <div class="contact-info-label">Project Lead</div>
+            <div class="contact-info-val">[lead@sliit.lk]</div>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="contact-info-icon">🏫</div>
+          <div>
+            <div class="contact-info-label">Institution</div>
+            <div class="contact-info-val">SLIIT – Sri Lanka Institute of Information Technology</div>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="contact-info-icon">📍</div>
+          <div>
+            <div class="contact-info-label">Location</div>
+            <div class="contact-info-val">New Kandy Road, Malabe, Sri Lanka</div>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="contact-info-icon">💻</div>
+          <div>
+            <div class="contact-info-label">GitHub Repository</div>
+            <div class="contact-info-val" style="color:var(--primary)">github.com/[username]/sigiriya-dt</div>
+          </div>
+        </div>
+
+        <div style="margin-top:1rem;padding:1.2rem;background:var(--bg2);border:1px solid var(--border);border-radius:12px">
+          <div style="font-size:0.75rem;letter-spacing:0.1em;color:var(--text-dim);text-transform:uppercase;margin-bottom:0.8rem">Office Hours</div>
+          <div style="font-size:0.9rem;color:var(--text-dim);line-height:1.8">
+            Monday – Friday: 9:00 AM – 5:00 PM<br>
+            Response time: Within 24 hours
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <footer><div class="footer-logo">⟡ Sigiriya Digital Twin Platform</div><div class="footer-text">AI-Powered Tourism Management · Sri Lanka © 2024</div></footer>
+</section>
+
+<script src="../js/script.js"></script>
+</body>
+</html>
