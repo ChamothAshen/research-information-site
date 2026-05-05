@@ -45,15 +45,15 @@
 
         <div class="form-group">
           <label class="form-label">Your Name</label>
-          <input type="text" class="form-input" placeholder="Full Name">
+          <input type="text" id="contact-name" class="form-input" placeholder="Full Name">
         </div>
         <div class="form-group">
           <label class="form-label">Email Address</label>
-          <input type="email" class="form-input" placeholder="your@email.com">
+          <input type="email" id="contact-email" class="form-input" placeholder="your@email.com">
         </div>
         <div class="form-group">
           <label class="form-label">Subject</label>
-          <select class="form-select form-input">
+          <select id="contact-subject" class="form-select form-input">
             <option value="">Select Subject</option>
             <option>General Inquiry</option>
             <option>Technical Question</option>
@@ -64,9 +64,9 @@
         </div>
         <div class="form-group">
           <label class="form-label">Message</label>
-          <textarea class="form-textarea form-input" placeholder="Your message here..."></textarea>
+          <textarea id="contact-message" class="form-textarea form-input" placeholder="Your message here..."></textarea>
         </div>
-        <button class="form-submit" onclick="this.textContent='✅ Message Sent!';setTimeout(()=>this.textContent='Send Message →',2000)">Send Message →</button>
+        <button class="form-submit" id="send-msg-btn" onclick="sendEmail()">Send Message →</button>
       </div>
 
       <div class="contact-info-wrap">
@@ -78,7 +78,7 @@
           <div class="contact-info-icon">📧</div>
           <div>
             <div class="contact-info-label">Team Email</div>
-            <div class="contact-info-val">[group-email@sliit.lk]</div>
+            <div class="contact-info-val">dinusha.nawarathna123@gmail.com</div>
           </div>
         </div>
 

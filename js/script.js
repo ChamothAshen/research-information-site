@@ -36,3 +36,65 @@
   }
 
   window.addEventListener('load', animateCounters);
+
+  async function sendEmail() {
+    const name = document.getElementById('contact-name')?.value;
+    const email = document.getElementById('contact-email')?.value;
+    const subject = document.getElementById('contact-subject')?.value;
+    const message = document.getElementById('contact-message')?.value;
+
+    if (!name || !email || !message) {
+      alert("Please fill in your name, email, and message.");
+      return;
+    }
+
+    const btn = document.getElementById('send-msg-btn');
+    if (!btn) return;
+    
+    const originalText = btn.textContent;
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          // USER INSTRUCTION: Get your free access key from https://web3forms.com/ and paste it below
+          access_key: "52bc3bac-9e9f-4a87-b1c7-c22df8a45266",
+          name: name,
+          email: email,
+          subject: subject || "Contact Form Inquiry",
+          message: message,
+        }),
+      });
+
+      const result = await response.json();
+      
+      if (result.success) {
+        btn.textContent = '✅ Message Sent!';
+        // Clear the form fields
+        document.getElementById('contact-name').value = '';
+        document.getElementById('contact-email').value = '';
+        document.getElementById('contact-subject').value = '';
+        document.getElementById('contact-message').value = '';
+      } else {
+        alert("Failed to send: " + result.message);
+        btn.textContent = originalText;
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("Something went wrong. Please try again.");
+      btn.textContent = originalText;
+    } finally {
+      btn.disabled = false;
+      setTimeout(() => {
+        if (btn.textContent === '✅ Message Sent!') {
+          btn.textContent = 'Send Message →';
+        }
+      }, 3000);
+    }
+  }
